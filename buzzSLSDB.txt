@@ -1,0 +1,35 @@
+int buzz = 11;
+int btn = 9;
+int btnstate = 0;
+int lastbtn = 0;
+int alarm=0;
+
+void setup() {
+pinMode(buzz, OUTPUT);
+//pinMode(led, OUTPUT);
+pinMode(btn, INPUT);
+Serial.begin(9600);
+}
+
+void loop() {
+
+btnstate = digitalRead(btn);
+
+
+if(btnstate != lastbtn){
+
+  if(btnstate == LOW){
+      if(alarm==0){
+         tone(buzz,1000);
+        // digitalWrite(led,HIGH);
+         alarm = 1;
+      }
+else{
+    noTone(buzz);
+    //digitalWrite(led,LOW);
+    alarm = 0;
+}
+  }
+}
+lastbtn = btnstate;
+}
