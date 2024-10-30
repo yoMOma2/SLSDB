@@ -1,0 +1,71 @@
+public static void main(String[] args) {
+        Calc();
+    }
+    static void Calc(){
+        Scanner obj = new Scanner(System.in);  
+    
+    
+    System.out.println("Menu");
+    System.out.println("A - Addition");
+    System.out.println("S - Subtraction");
+    System.out.println("M - Multiplication");
+    System.out.println("D - Division");
+    System.out.println("");
+    System.out.print("Pleae enter a letter:");
+    char letter = obj.next().charAt(0);
+    switch(letter){
+        case 'A':
+            System.out.println("Welcome to addition");
+            System.out.print("Enter 1st number: ");
+            int num1 = obj.nextInt();
+            System.out.print("Enter 2nd number: ");
+            int num2 = obj.nextInt();
+            
+            int sum = num1 + num2;
+            System.out.println("Display sum " + sum);
+            
+
+            System.out.print("Enter Y to go back/ N to stop:");
+            char choice = obj.next().charAt(0);
+            
+            if(choice == 'Y'){
+                            System.out.println("");
+                Calc();
+            }
+            else if(choice == 'N'){
+                System.exit(0);
+            }
+            else{
+                System.out.println("No letter chosen");
+            }
+            break;
+        case 'S':
+            System.out.println("Welcome to subtraction");
+            System.out.print("Enter 1st number: ");
+            int num3 = obj.nextInt();
+            System.out.print("Enter 2nd number: ");
+            int num4 = obj.nextInt();
+            
+            int diff = num3 - num4;
+            System.out.println("Display sum " + diff);
+            
+
+            System.out.print("Enter Y to go back/ N to stop:");
+            char choice1 = obj.next().charAt(0);
+            
+            if(choice1 == 'Y'){
+                            System.out.println("");
+                Calc();
+            }
+            else if(choice1 == 'N'){
+                System.exit(0);
+            }
+            else{
+                System.out.println("No letter chosen");
+            }
+            break;
+        case 'M':
+            
+            
+    }
+    }
